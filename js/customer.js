@@ -31,7 +31,7 @@ function setTableData() {
                 <td>${data.address}</td>
                 <td>${data.salary}</td>
                 <td>
-                    <button class="btn btn-success btn-sm" onclick="loadUpdateModal('${data.id}','${data.name}','${data.address}','${data.salary}')">Update</button> | 
+                    <button class="btn btn-success btn-sm" onclick="loadUpdateModal('${data.id}','${data.name}','${data.address}','${data.salary}')">Update</button> &nbsp; | &nbsp;
                     <button class="btn btn-danger btn-sm" onclick="deleteCustomer('${data.id}')">Delete</button>
                 </td>
             </tr>`;
@@ -83,7 +83,7 @@ const launchModal = (type, message) => {
      if (type==='success'){
          title='Success!';
      }else if(type==='warning'){
-         title='Warinng!'
+         title='Waring!'
      }*/
     $('#success-modal').click();
 }

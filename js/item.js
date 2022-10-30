@@ -29,7 +29,7 @@ function setItemTableData(){
             <td>${data.qtyOnHand}</td>
             <td>${data.unitPrice}</td>
             <td>
-                    <button class="btn btn-success btn-sm" onclick="loadItemUpdateModal('${data.itemCode}','${data.description}','${data.qtyOnHand}','${data.unitPrice}')">Update</button> | 
+                    <button class="btn btn-success btn-sm" onclick="loadItemUpdateModal('${data.itemCode}','${data.description}','${data.qtyOnHand}','${data.unitPrice}')">Update</button> &nbsp; | &nbsp; 
                     <button class="btn btn-danger btn-sm" onclick="deleteItem('${data.itemCode}')">Delete</button>
             </td>
         </tr>
@@ -87,8 +87,8 @@ function updateItem() {
     for (let i = 0; i < items.length; i++) {
         if (items[i].itemCode === tempItemCode){
             items[i].description = $('#update_description').val();
-            items[i].qtyOnHand = $('#update_qty_on_hand').val();
-            items[i].unitPrice = $('#update_unit_price').val();
+            items[i].qtyOnHand = Number($('#update_qty_on_hand').val());
+            items[i].unitPrice =Number($('#update_unit_price').val());
 
             localStorage.setItem('items', JSON.stringify(items));
             $('update-close').click();
